@@ -5,7 +5,7 @@
   <li>Age: <%=  @dog.age %></li>
   <li>Employees:
     <%  @dog.employees.each do |employee| %><br>
-    <%= employee.full_name %>
+    <%= link_to employee.full_name, employee %>
     <% end %>
   </li>
 

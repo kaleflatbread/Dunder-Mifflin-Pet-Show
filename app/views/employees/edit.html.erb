@@ -15,6 +15,6 @@
 <%= f.text_field :img_url %><br><br>
 
 
-Dog: <%= f.collection_select(:dog_id, Dog.all, :id, :name) %>
+Dog: <%= f.collection_select(:dog_id, @all_dogs, :id, :name) %>
 <%= f.submit "Save" %>
 <% end %>

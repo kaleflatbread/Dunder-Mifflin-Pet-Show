@@ -14,6 +14,7 @@ class EmployeesController < ApplicationController
 
   def update
     @employee = find_employee
+    @all_dogs = Dog.all
     if @employee.update(employee_params)
       redirect_to @employee
     else
@@ -28,6 +29,7 @@ class EmployeesController < ApplicationController
 
   def create
     @employee = Employee.new(employee_params)
+    @all_dogs = Dog.all
     if @employee.valid?
       @employee.save
       redirect_to @employee
